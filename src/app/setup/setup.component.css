@@ -1,0 +1,81 @@
+.first-window{
+    margin: 20px auto;
+    width: 500px;
+    height: 200px;
+    border: 1px solid black;
+     background: #fff;
+     padding: 20px;
+     display: flex;
+     flex-direction: row;
+     justify-content: space-around; 
+}
+
+
+.holder{
+    display: flex;
+    flex-direction: row;     
+    margin-bottom: 30px;
+    justify-content: space-between;
+}
+.memory-size{
+    width:140px;
+    height: 30px;
+    margin-right:10px ;
+}
+#type{
+    width:120px;  
+}
+
+.hole{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;  
+    margin-bottom: 20px;      
+}
+.hole input{
+    width:140px;
+    height: 25px;
+       
+}
+.hole button{
+    width:147px;
+    height: 25px;
+}
+button.submit{
+    width:147px;
+    height: 25px;
+
+    
+}
+.memory-diagram{
+    width: 120px;
+    height: 200px;
+    
+    display: flex;
+    flex-direction: row;
+}
+
+
+.memory{
+    border: 1px solid black;  
+    width: 80%;
+    height: 100%;
+}
+.limits{
+    border: 1px solid black;  
+    width: 20%;
+    height: 100%;
+}
+.proccess{
+    width: 100%;
+    height:15%;
+    background: yellow;
+    text-align: center;
+}
+
+.memory-hole{
+    background: yellow;
+}
+.memory-process{
+    background: red;
+}

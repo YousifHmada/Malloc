@@ -1,0 +1,35 @@
+<section class="first-window">
+  <div class="setup">
+    <div class="holder">
+      <input type="text" class="memory-size" placeholder="Meomory Size" ng-model="memorySize">
+      <select name="type" id="type" ng-model="allocMethod">
+        <option value="first-fit">First-Fit</option>
+        <option value="best-fit">Best-Fit</option>
+
+      </select>
+    </div>
+    <form class="hole" (ngSubmit)="addHole(f)" #f="ngForm">
+      <label >Hole</label>
+      <input type="number" class="start" placeholder="Start" name="start" ng-model>
+      <input type="number" class="size" placeholder="Size" name="size" ng-model>
+      <button class="add">Add </button>
+    </form>
+      <button class="submit">Submit</button>
+
+  </div>
+
+  <div class="memory-diagram">
+      <div class="limits">
+
+        </div>
+    <div class="memory ">
+      <div class="proccess">
+          <label for="">name</label>
+        
+      </div>
+        
+    </div>
+    
+
+  </div>
+</section>

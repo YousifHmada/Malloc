@@ -1,0 +1,25 @@
+.first-window{
+    margin: 20px auto;
+    width: 500px;
+    height: 300px;
+    border: 1px solid black;
+ background: #fff;
+}
+.second-window{
+    margin: 20px auto;
+    width: 500px;
+    height: 300px;
+    border: 1px solid black;
+    background: #fff;
+    
+}
+body{
+    background: linear-gradient(#20002c, #cbb4d4  )
+    
+}
+
+.memory-diagram{
+    width: 100px;
+    height: 200px;
+    border: 1px solid black;  
+}
