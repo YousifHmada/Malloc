@@ -1,7 +1,7 @@
 <section class="first-window">
   <div class="setup">
     <form class="holder" (ngSubmit)="updateSetup(f1)" #f1="ngForm">
-      <input type="text" class="memory-size" placeholder="Meomory Size" ngModel name="size" required>
+      <input type="text" class="memory-size" (change)="memorySizeChanged()" placeholder="Meomory Size" [(ngModel)]="memorySize" name="size" required>
       <select id="type" [(ngModel)]="selectedValue" name="type" required >
         <option value="first-fit">First-Fit</option>
         <option value="best-fit">Best-Fit</option>
@@ -12,7 +12,7 @@
       <label >Hole</label>
       <input type="number" class="start" placeholder="Start" ngModel name="start" required>
       <input type="number" class="size" placeholder="Size" ngModel name="size" required>
-      <button class="add" type="submit" [disabled]="f2.invalid">Add </button>
+      <button class="add" type="submit" [disabled]="f2.invalid || !memorySize">Add </button>
     </form>
   </div>
 
@@ -23,9 +23,7 @@
     <div class="memory ">
       <div class="proccess">
           <label for="">name</label>
-        
       </div>
-        
     </div>
     
 

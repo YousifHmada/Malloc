@@ -10,7 +10,6 @@ import { MemoryService } from './memory.service'
   ]
 })
 export class AppComponent implements OnInit {
-  title = 'app';
   setupView = true;
   cancelSetupView(){
     this.setupView = false;
@@ -20,14 +19,5 @@ export class AppComponent implements OnInit {
   };
   constructor(private MemoryService: MemoryService){};
   ngOnInit(){
-    let input = [
-      {location:1500,size:200},
-      {location:0,size:200},
-      {location:1000,size:300},
-      {location:300,size:50}
-    ]    
-    console.log(this.MemoryService.generate_holes(input, 1700));
-    console.log(this.MemoryService.generate_holes(input, 1900));
-    
   }
 }

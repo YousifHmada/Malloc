@@ -10,15 +10,17 @@ import { MemoryService } from '../memory.service'
 export class BoardComponent implements OnInit {
 
   @Output() back = new EventEmitter();
+  processes;
 
   constructor(private MemoryService: MemoryService){};
 
   ngOnInit() {
+    this.processes = this.MemoryService.processes;
   }
 
   addProcess(form: NgForm){
-  	form.reset();
-    console.log(form);
+    this.MemoryService.add_process(form.value.name, +form.value.size);
+    form.reset();
   }
 
 }
