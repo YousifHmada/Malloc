@@ -12,6 +12,12 @@ import { MemoryService } from './memory.service'
 export class AppComponent implements OnInit {
   title = 'app';
   setupView = true;
+  cancelSetupView(){
+    this.setupView = false;
+  };
+  openSetupView(){
+    this.setupView = true;
+  };
   constructor(private MemoryService: MemoryService){};
   ngOnInit(){
     let input = [

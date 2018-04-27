@@ -1,2 +1,2 @@
-<app-setup *ngIf="setupView"></app-setup>
-<app-board *ngIf="!setupView"></app-board>
+<app-setup *ngIf="setupView" (save)="cancelSetupView()"></app-setup>
+<app-board *ngIf="!setupView" (back)="openSetupView()"></app-board>

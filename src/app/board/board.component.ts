@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { NgForm } from '@angular/forms';
+import { MemoryService } from '../memory.service'
 
 @Component({
   selector: 'app-board',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BoardComponent implements OnInit {
 
-  constructor() { }
+  @Output() back = new EventEmitter();
+
+  constructor(private MemoryService: MemoryService){};
 
   ngOnInit() {
+  }
+
+  addProcess(form: NgForm){
+  	form.reset();
+    console.log(form);
   }
 
 }

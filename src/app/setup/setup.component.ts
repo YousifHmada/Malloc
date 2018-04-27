@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { NgForm } from '@angular/forms';
-
+import { MemoryService } from '../memory.service'
 
 @Component({
   selector: 'app-setup',
@@ -9,13 +9,23 @@ import { NgForm } from '@angular/forms';
 })
 export class SetupComponent implements OnInit {
 
-  constructor() { }
+  selectedValue = "first-fit";
+
+  @Output() save = new EventEmitter();
+
+  constructor(private MemoryService: MemoryService){};
 
   ngOnInit() {
   }
 
   addHole(form: NgForm){
-  	console.log(form);
+  	form.reset();
+    console.log(form);
+  }
+
+  updateSetup(form: NgForm){
+	  this.MemoryService.updateSetup(form.value.size, form.value.type);  	
+  	this.save.emit();
   }
 
 }

@@ -3,7 +3,17 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class MemoryService {
 
+  size;
+  type;
+
   constructor() { }
+
+  updateSetup(size, type){
+    this.size = size;
+    this.type = type;
+    console.log(size, type);
+  };
+
 
   best_fit (input, size){
     //return location

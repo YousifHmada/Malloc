@@ -1,11 +1,11 @@
 <section class="second-window">
-	<button class="back">Back</button>
-	<div class="process">
+	<button class="back" (click)="this.back.emit()">Back</button>
+	<form class="process" (ngSubmit)="addProcess(f)" #f="ngForm">
 		<label for="">Process</label>
-		<input type="text" class="name" placeholder="Name">
-		<input type="number" class="p-size" placeholder="Size">
-		<button class="add">Add </button>
-	</div>
+		<input type="text" class="name" placeholder="Name" ngModel name="name" required>
+		<input type="number" class="p-size" placeholder="Size" ngModel name="size" required>
+		<button class="add" type="submit" [disabled]="f.invalid">Add </button>
+	</form>
 	
 	<div class="memory-diagram">
 			<div class="limits">
